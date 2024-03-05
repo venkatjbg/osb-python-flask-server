@@ -32,6 +32,7 @@ def service_instance_deprovision(X_Broker_API_Version, service_id, plan_id, X_Br
 
     :rtype: object
     """
+    print("In side deprovisioning")
     return 'do some magic!'
 
 
@@ -53,6 +54,7 @@ def service_instance_get(X_Broker_API_Version, X_Broker_API_Originating_Identity
 
     :rtype: ServiceInstanceResource
     """
+    print("inside Query service")
     return 'do some magic!'
 
 
@@ -76,6 +78,8 @@ def service_instance_last_operation_get(X_Broker_API_Version, X_Broker_API_Origi
 
     :rtype: LastOperationResource
     """
+    
+    print("inside service_instance_last_operation_get")
     return 'do some magic!'
 
 
@@ -99,6 +103,8 @@ def service_instance_provision(X_Broker_API_Version, body, X_Broker_API_Originat
     """
     if connexion.request.is_json:
         body = ServiceInstanceProvisionRequest.from_dict(connexion.request.get_json())  # noqa: E501
+    
+    print("service_instance_provision")
     return 'do some magic!'
 
 
@@ -122,4 +128,5 @@ def service_instance_update(X_Broker_API_Version, body, X_Broker_API_Originating
     """
     if connexion.request.is_json:
         body = ServiceInstanceUpdateRequest.from_dict(connexion.request.get_json())  # noqa: E501
+    print("service_instance_update")
     return 'do some magic!'

@@ -20,4 +20,5 @@ def catalog_get(X_Broker_API_Version, X_Broker_API_Originating_Identity=None, X_
 
     :rtype: Catalog
     """
+    print("catalog_get")
     return 'do some magic!'

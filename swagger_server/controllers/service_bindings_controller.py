@@ -32,6 +32,7 @@ def service_binding_binding(X_Broker_API_Version, binding_id, body, X_Broker_API
     """
     if connexion.request.is_json:
         body = ServiceBindingRequest.from_dict(connexion.request.get_json())  # noqa: E501
+    print("service_binding_binding")
     return 'do some magic!'
 
 
@@ -55,6 +56,7 @@ def service_binding_get(X_Broker_API_Version, binding_id, X_Broker_API_Originati
 
     :rtype: ServiceBindingResource
     """
+    print("service_binding_get")
     return 'do some magic!'
 
 
@@ -80,6 +82,8 @@ def service_binding_last_operation_get(X_Broker_API_Version, binding_id, X_Broke
 
     :rtype: LastOperationResource
     """
+    
+    print("service_binding_last_operation_get")
     return 'do some magic!'
 
 
@@ -105,4 +109,5 @@ def service_binding_unbinding(X_Broker_API_Version, binding_id, service_id, plan
 
     :rtype: object
     """
+    print("service_binding_unbinding")
     return 'do some magic!'
